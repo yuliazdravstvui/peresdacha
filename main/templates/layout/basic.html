@@ -1,9 +1,9 @@
-{% load static %}{% load bootstrap4 %}
+{% load static %}
 <!DOCTYPE html><html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-{% bootstrap_css %}
+
 
 <header>
 <link rel="stylesheet" href="{% static 'css/styles.css' %}">
@@ -11,22 +11,22 @@
 <body>
 {% if user.is_authenticated %}
     <ul class="dropdown_menu">
-        <a class="item_menu" href="{% url 'main:index' %}">Главная</a>
-        <a class="item_menu" href="{% url 'main:service' %}">Услуги</a>
-        <a class="item_menu" href="{% url 'main:about' %}">О нас</a>
-        <a class="item_menu" href="{% url 'main:contacts' %}">Контакты</a>
-        <a class="item_menu" href="{% url 'main:create_service' %}">Добавить услугу</a>
-        <a class="item_menu" href="{% url 'main:basket' %}">Ваша корзина</a>
-        <a class="item_menu" href = "{% url 'main:logout' %}">Выйти</a>
+        <a class="item_menu" href="{% url 'main:index' %}">home</a>
+        <a class="item_menu" href="{% url 'main:service' %}">products</a>
+        <a class="item_menu" href="{% url 'main:about' %}">About us</a>
+        <a class="item_menu" href="{% url 'main:contacts' %}">Contacts</a>
+        <a class="item_menu" href="{% url 'main:create_service' %}">Add a product</a>
+        <a class="item_menu" href="{% url 'main:basket' %}">Basket</a>
+        <a class="item_menu" href = "{% url 'main:logout' %}">Log out</a>
     </ul>
 {% else %}
     <ul class="dropdown_menu">
-        <a class="item_menu" href="{% url 'main:index' %}">Главная</a>
-        <a class="item_menu" href="{% url 'main:service' %}">Услуги</a>
-        <a class="item_menu" href="{% url 'main:about' %}">О нас</a>
-        <a class="item_menu" href="{% url 'main:contacts' %}">Контакты</a>
-        <a class="item_menu" href="{% url 'main:login' %}">Войти</a>
-        <a class="item_menu" href="{% url 'main:register' %}">Зарегистрироваться</a>
+        <a class="item_menu" href="{% url 'main:index' %}">home</a>
+        <a class="item_menu" href="{% url 'main:service' %}">products</a>
+        <a class="item_menu" href="{% url 'main:about' %}">About us</a>
+        <a class="item_menu" href="{% url 'main:contacts' %}">Contacts</a>
+        <a class="item_menu" href="{% url 'main:login' %}">Log in</a>
+        <a class="item_menu" href="{% url 'main:register' %}">Register</a>
     </ul>
 {% endif %}
 {% block content%}

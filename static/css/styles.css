@@ -1,9 +1,20 @@
 .dropdown_menu{
+    margin-top: -10px;
+    margin-left: -10px;
+    padding: 15px;
     font-size: 30px;
     position: relative;
-
+    text-decoration: none;
+    display: flex;
+    margin-right:20px;
+    background-color: #FFC0CB;
+    color: #e75480;
 }
 
 .item_menu {
+color: #de3163;
     display: flex;
+    margin-right:20px;
 }
+
+

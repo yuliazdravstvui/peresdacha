@@ -1,6 +1,6 @@
 from django.contrib.auth.forms import UserCreationForm
 from django.forms import ModelForm
-from .models import Product, AdvUser
+from .models import Product, User
 
 
 class CreateProductForm(ModelForm):
@@ -11,5 +11,5 @@ class CreateProductForm(ModelForm):
 
 class RegistrationForm(UserCreationForm):
     class Meta:
-        model = AdvUser
+        model = User
         fields = ['username', 'email', 'password1', 'password2']

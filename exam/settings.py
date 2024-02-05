@@ -120,7 +120,7 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, "static"), ]
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-AUTH_USER_MODEL = 'main.AdvUser'
+AUTH_USER_MODEL = 'main.User'
 Command.default_port = "8000"
 
 LOGIN_REDIRECT_URL = '/create_service/'

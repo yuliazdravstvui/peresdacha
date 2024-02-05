@@ -4,21 +4,21 @@
 {% block content %}
 {% if products %}
     {% for product in products %}
-        <p><b>Описание товара:</b> {{ product.description }}</p>
-        <b>Изображение товара:</b> <img src="{{ product.photo.url }}" width="300px" height="300px">
+        <p><b>Description:</b> {{ product.description }}</p>
+        <b>Image:</b> <img src="{{ product.photo.url }}" width="150px" height="150pxs">
         {% if user.is_authenticated %}
             <br>
             {% if product in user.advuser.basket.all %}
-                <p>Уже в корзине</p>
+                <p>In basket yet</p>
             {% else %}
                 <form method="post" action="{% url 'main:add_to_basket' product.id %}">
                     {% csrf_token %}
-                    <button type="submit">Добавить в корзину</button>
+                    <button class="btn btn-outline-secondary" type="submit">Add to basket</button>
                 </form>
             {% endif %}
         {% endif %}
     {% endfor %}
 {% else %}
-    <h3>Пусто :(</h3>
+    <h3>Nope :(</h3>
 {% endif %}
 {% endblock %}

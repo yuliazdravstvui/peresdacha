@@ -59,7 +59,7 @@ class AddToBasketView(View):
             user.basket.add(product)
             return redirect('main:service')
         else:
-            return HttpResponseBadRequest("Продукт уже находиться в корзине")
+            return HttpResponseBadRequest("The product is already in the cart")
 
 
 class RegisterView(View):
