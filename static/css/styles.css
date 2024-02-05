@@ -1,0 +1,9 @@
+.dropdown_menu{
+    font-size: 30px;
+    position: relative;
+
+}
+
+.item_menu {
+    display: flex;
+}

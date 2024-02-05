@@ -1,0 +1,15 @@
+{% extends "layout/basic.html" %}
+{% load bootstrap4 %}
+{% load static %}
+{% block content %}
+{% if user.is_authenticated %}
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+        <h1>Создание нового товара</h1>
+        {{form.as_p}}
+    {% buttons submit='Создать' %} {% endbuttons %}
+</form>
+{% else %}
+<h3>Авторизуйтесь, чтобы создать товар</h3>
+{% endif %}
+{% endblock %}
